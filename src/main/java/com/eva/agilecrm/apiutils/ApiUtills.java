@@ -23,7 +23,7 @@ public class ApiUtills {
 		Response rspObj = RestAssured.given().auth().basic(username, password)
 				.contentType(ContentType.JSON).accept(ContentType.JSON)
 				.get(baseUrl+JsonUrlID);
-		
+		System.out.println("hello");
 		return rspObj;
 
 	}
