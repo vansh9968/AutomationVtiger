@@ -19,10 +19,10 @@ public class ApiUtills {
     private String baseUrl="https://expertview9968.agilecrm.com/";
     
     
-	public Response getRequest(String JsonUrlID) {
+	public Response getRequest(String JsonUrl,long ID) {
 		Response rspObj = RestAssured.given().auth().basic(username, password)
 				.contentType(ContentType.JSON).accept(ContentType.JSON)
-				.get(baseUrl+JsonUrlID);
+				.get(baseUrl+JsonUrl+ID);
 		System.out.println("hello");
 		return rspObj;
 
@@ -60,7 +60,7 @@ public class ApiUtills {
 
 	}
 
-	public Response deleteRequest(String jsonObjectUrl) {
+	public Response deleteRequest(long jsonObjectUrl) {
 		
 		Response rspObj = RestAssured.given().auth().basic(username, password)
 				.contentType(ContentType.JSON).accept(ContentType.JSON)

@@ -79,7 +79,7 @@ public class ApiTestcases {
 	@Test(dependsOnMethods = "verifyCreateContact")
 	public  void verifyContactInfoByGetContactById() throws IOException {
 					ApiUtills apiUtil =new ApiUtills();
-				Response jsonObject=apiUtil.getRequest("dev/api/contacts/"+actualID);
+				Response jsonObject=apiUtil.getRequest("dev/api/contacts/",actualID);
 		
 		Assert.assertEquals(jsonObject.getStatusCode(), 200);
 		Assert.assertTrue(jsonObject.time()<20000);
@@ -123,21 +123,22 @@ public class ApiTestcases {
 		String contactJsonString=mapper.writeValueAsString(contactRequest);
 		ApiUtills au = new ApiUtills();
 		Response rspObj = au.postRequest(contactJsonString, "dev/api/contacts");
-		====================
+//		====================
 
 		String rspBodyString = rspObj.getBody().asPrettyString();
 		System.out.println(rspBodyString);
 
 		JSONObject rspJsonObj = new JSONObject(rspBodyString);
+		
 		long rspId = rspJsonObj.getLong("id");
 		System.out.println("Response Json Id= " + rspId);
 
-//		Response rspDelete = au.deleteRequest();
+		Response rspDelete = au.deleteRequest(rspId);
 
 		System.out.println(rspDelete.getStatusCode());
 		System.out.println(rspDelete.time());
 
-		Response rspGet = au.getRequest(id);
+		Response rspGet = au.getRequest("dev/api/contacts",rspId);
 		int StatusCode = rspGet.getStatusCode();
 		System.out.println(StatusCode);
 		if (StatusCode == 204) {

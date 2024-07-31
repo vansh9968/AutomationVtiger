@@ -1,0 +1,10 @@
+Api_Restassured\Random_Class.class
+com\eva\agilecrm\pojo\contact\ViewedPojo.class
+Api_Restassured\RestAssuredBasic.class
+com\eva\agilecrm\apiutils\JsonUtil.class
+com\eva\agilecrm\pojo\contact\TagsWithTimePojo.class
+com\eva\agilecrm\apiutils\ApiUtills.class
+com\eva\agilecrm\pojo\contact\ContactRequestPojo.class
+com\eva\agilecrm\pojo\contact\OwnerPojo.class
+com\eva\agilecrm\pojo\contact\ContactResponsePojo.class
+com\eva\agilecrm\pojo\contact\Property.class
