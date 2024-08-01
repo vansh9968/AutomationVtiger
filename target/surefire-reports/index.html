@@ -154,8 +154,8 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;ApiTestcases&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot;&gt;
+&lt;suite name=&quot;ApiTestcases&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.eva.api.testscripts.ApiTestcases&quot;/&gt;
     &lt;/classes&gt;
@@ -201,16 +201,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyCreateContact')
 data.setCell(0, 2, 'com.eva.api.testscripts.ApiTestcases')
-data.setCell(0, 3, 13120);
+data.setCell(0, 3, 15302);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyContactInfoByGetContactById')
 data.setCell(1, 2, 'com.eva.api.testscripts.ApiTestcases')
-data.setCell(1, 3, 1164);
+data.setCell(1, 3, 2286);
 window.suiteTableData['ApiTestcases']= { tableData: data, tableDiv: 'times-div-ApiTestcases'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-ApiTestcases">
               </div> <!-- times-div-ApiTestcases -->
             </div> <!-- times-div -->
@@ -243,7 +243,7 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyContactInfoByGetContactById</span>
-                <span class="method-start">13127 ms</span>
+                <span class="method-start">15311 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
