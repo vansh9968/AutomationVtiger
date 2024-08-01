@@ -57,7 +57,7 @@ public class ApiTestcases {
 		ApiUtills au = new ApiUtills();
 		Response rspObj = au.postRequest(contactJsonString, "dev/api/contacts");
 
-		Assert.assertEquals(rspObj.getStatusCode(), 200);
+		Assert.assertEquals(rspObj.getStatusCode(), 20000);
        	Assert.assertTrue(rspObj.time()<20000);
        		
 		String getRspBodyString = rspObj.getBody().asPrettyString();
