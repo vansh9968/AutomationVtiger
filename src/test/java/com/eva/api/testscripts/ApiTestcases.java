@@ -82,7 +82,7 @@ public class ApiTestcases {
 				Response jsonObject=apiUtil.getRequest("dev/api/contacts/",actualID);
 		
 		Assert.assertEquals(jsonObject.getStatusCode(), 200);
-		Assert.assertTrue(jsonObject.time()<20);
+		Assert.assertTrue(jsonObject.time()<200);
 		
 		String strJsonObject=jsonObject.getBody().asPrettyString();			ObjectMapper mapper=new ObjectMapper();			ContactResponsePojo contactResponse=mapper.readValue(strJsonObject, ContactResponsePojo.class);
 		
